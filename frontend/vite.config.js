@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/users': {
-        target: 'http://localhost:3000',
+        target: 'https://birdie-flappy-bird-game.onrender.com',
         changeOrigin: true,
         secure: false,
       },
