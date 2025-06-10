@@ -1,4 +1,4 @@
-const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+const baseUrl = import.meta.env.VITE_API_BASE_URL || 'https://birdie-flappy-bird-game.onrender.com';
 
 const httpAction = async ({ url, method = 'GET', body }) => {
   try {
