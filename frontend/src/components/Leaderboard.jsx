@@ -10,7 +10,7 @@ const Leaderboard = () => {
     const fetchScores = async () => {
       try {
         // Fetch data from the backend API
-        const response = await fetch(`http://localhost:3000/api/scores/top10`);
+        const response = await fetch(`https://birdie-flappy-bird-game.onrender.com/api/scores/top10`);
         if (!response.ok) {
           throw new Error(
             `Failed to fetch leaderboard: ${response.statusText}`
