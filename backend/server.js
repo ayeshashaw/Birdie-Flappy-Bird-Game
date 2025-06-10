@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://birdie-flappy-bird-game.vercel.app",
   })
 );
 
@@ -29,7 +29,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/callback", // Use prod value in deployment
+      callbackURL: "https://birdie-flappy-bird-game.onrender.com/auth/google/callback", // Use prod value in deployment
     },
     (accessToken, refreshToken, profile, done) => {
       return done(null, profile);
@@ -54,7 +54,7 @@ app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
     session: false, 
-    failureRedirect: "http://localhost:5173",
+    failureRedirect: "https://birdie-flappy-bird-game.vercel.app",
   }),
   googleAuth 
 );
