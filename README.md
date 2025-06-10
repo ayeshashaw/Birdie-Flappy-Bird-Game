@@ -1,6 +1,7 @@
-# Flappy Bird Game 🐦  Deployment Link - https://birdie-flappy-bird-game.vercel.app
+# Flappy Bird Game 🐦  
+**Deployment Link** - https://birdie-flappy-bird-game.vercel.app
 
-This is a web-based Flappy Bird game featuring user authentication, score tracking, and a leaderboard.
+This is a web-based Flappy Bird game that features user authentication, score tracking, and a leaderboard.
 
 ## Features ⭐
 
@@ -8,12 +9,12 @@ This is a web-based Flappy Bird game featuring user authentication, score tracki
 - Google OAuth integration 🔒
 - Real-time score tracking 📊
 - Leaderboard to display top scores 🏆
-- Responsive design 📱
+- Responsive design for mobile and desktop 📱
 
 ## Team Contributions 👥
 
-- **@ishitars27**: Handled core game display and game logic 🎮, developed visual effects, and completed UI/UX design 🎨.
-- **@ayeshashaw**: Implemented the leaderboard, API logic, login/logout functionality, Google Auth, and managed deployment 🚀.
+- **https://github.com/ishitars27**: Managed the core game display and game logic 🎮, developed visual effects, and completed the UI/UX design 🎨.
+- **https://github.com/ayeshashaw**: Implemented the leaderboard, API logic, login/logout functionality, Google authentication, and handled deployment 🚀.
 
 ## Installation ⚙️
 
@@ -76,9 +77,9 @@ To set up the project locally, follow these steps:
 
 ### Usage 🎮
 
-Open your browser and navigate to `http://localhost:5173` (or the port indicated by `npm run dev`).
+Open your browser and go to `http://localhost:5173` (or the port indicated by `npm run dev`).
 
-- Register a new account or log in with existing credentials.
+- Register a new account or log in with your existing credentials.
 - Play the Flappy Bird game and try to beat your high score!
 - Check the leaderboard to see how you rank against other players.
 
