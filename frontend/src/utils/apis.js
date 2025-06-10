@@ -1,16 +1,13 @@
-const apis = () => {
-  const base = import.meta.env.VITE_API_BASE_URL || '';
+const apis = () => ({
+  registerUser: '/users/register',
+  loginUser: '/users/login',
+  userProfile: '/users/get-user',
+  saveScore: '/api/scores/save',
+  getUserHighestScore: '/api/scores/my-highest',
+  logout: '/users/logout',
+  forgetPassword: '/users/forget',
+  otpVerify: '/users/otp/verify',
+});
 
-  return {
-    registerUser: `${base}/users/register`,
-    loginUser: `${base}/users/login`,
-    userProfile: `${base}/users/get-user`,
-    saveScore: `${base}/api/scores/save`,
-    getUserHighestScore: `${base}/api/scores/my-highest`,
-    logout: `${base}/users/logout`,
-    forgetPassword: `${base}/users/forget`,
-    otpVerify: `${base}/users/otp/verify`,
-  };
-};
 
 export default apis;
