@@ -16,6 +16,9 @@ const httpAction = async ({ url, method = 'GET', body }) => {
     }
 
     return await response.json();
+    const fullUrl = `${baseUrl}${url}`;
+console.log("🔍 Final API URL:", fullUrl);
+
   } catch (error) {
     console.error('HTTP Action Error:', error.message);
     throw error;
