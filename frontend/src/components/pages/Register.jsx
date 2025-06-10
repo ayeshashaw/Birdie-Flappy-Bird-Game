@@ -38,7 +38,6 @@ const Register = () => {
       };
 
       const result = await httpAction(data);
-      console.log("Registration result:", result); // Debug log
       
       // Check for both success and status properties
       if (result?.success || result?.status) {
