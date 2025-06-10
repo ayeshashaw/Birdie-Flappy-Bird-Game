@@ -1,10 +1,8 @@
 const baseUrl = import.meta.env.VITE_API_BASE_URL || 'https://birdie-flappy-bird-game.onrender.com';
-console.log("🔧 baseUrl is:", baseUrl);
 
 const httpAction = async ({ url, method = 'GET', body }) => {
   try {
     const fullUrl = `${baseUrl}${url}`;
-    console.log("🔍 Final API URL:", fullUrl); 
 
     const response = await fetch(fullUrl, {
       method,
