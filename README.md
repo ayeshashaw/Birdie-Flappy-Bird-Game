@@ -1,14 +1,19 @@
-# Flappy Bird Game 🐦
+# Flappy Bird Game 🐦  Deployment Link - https://birdie-flappy-bird-game.vercel.app
 
-This is a web-based Flappy Bird game that includes user authentication, score tracking, and a leaderboard.
+This is a web-based Flappy Bird game featuring user authentication, score tracking, and a leaderboard.
 
 ## Features ⭐
 
 - User authentication (Login, Register, Forgot Password, OTP Verification)
 - Google OAuth integration 🔒
 - Real-time score tracking 📊
-- A leaderboard to display top scores 🏆
+- Leaderboard to display top scores 🏆
 - Responsive design 📱
+
+## Team Contributions 👥
+
+- **@ishitars27**: Handled core game display and game logic 🎮, developed visual effects, and completed UI/UX design 🎨.
+- **@ayeshashaw**: Implemented the leaderboard, API logic, login/logout functionality, Google Auth, and managed deployment 🚀.
 
 ## Installation ⚙️
 
@@ -20,7 +25,7 @@ To set up the project locally, follow these steps:
 - npm or Yarn
 - MongoDB Atlas account (or a local MongoDB instance)
 - Google Cloud Project for OAuth credentials
-- Gmail account for Nodemailer (or other SMTP service)
+- Gmail account for Nodemailer (or another SMTP service)
 
 ### Backend Setup 🖥️
 
@@ -45,7 +50,7 @@ To set up the project locally, follow these steps:
    EMAIL_PASS=your_gmail_app_password
    ```
 
-   **Note:** If using Gmail for the `EMAIL_PASS`, you'll need to generate an App Password from your Google Account security settings.
+   **Note:** If using Gmail for `EMAIL_PASS`, you'll need to generate an App Password from your Google Account security settings.
 
 4. Start the backend server:
    ```bash
@@ -71,10 +76,10 @@ To set up the project locally, follow these steps:
 
 ### Usage 🎮
 
-Open your browser and navigate to `http://localhost:5173` (or the port indicated by `npm run dev`). 
+Open your browser and navigate to `http://localhost:5173` (or the port indicated by `npm run dev`).
 
 - Register a new account or log in with existing credentials.
-- Play the Flappy Bird game and try to beat your high score! 
+- Play the Flappy Bird game and try to beat your high score!
 - Check the leaderboard to see how you rank against other players.
 
 ## Technologies Used 🛠️
@@ -130,4 +135,4 @@ frontend/
 
 ## Contributing 🤝
 
-Feel free to fork this repository and contribute. Pull requests are welcome!
+Feel free to fork this repository and contribute! Pull requests are always welcome.
