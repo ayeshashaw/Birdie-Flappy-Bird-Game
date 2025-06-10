@@ -1,0 +1,287 @@
+:root {
+  font-family: "Jersey 10 Charted", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  background-color: #000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#game-area {
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  /* cursor: url("/haha.cur") 0 0, auto !important; */
+  background-image: url(/ground.png.);
+  /* background-size: cover; */
+  background-position: ;
+  background-size: cover;
+  background-repeat: repeat;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+}
+body::-webkit-scrollbar-track {
+  background-color: #000;
+}
+a:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes moveGround {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -200%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/ground.png");
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  background-attachment: fixed;
+  font-family: "flappy";
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  animation: moveGround 10s linear infinite;
+  overflow-y: scroll;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+  font-family: "Jersey 20", sans-serif;
+  color: #646cff;
+  margin-bottom: 1rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: clamp(0.4em, 2vw, 0.6em) clamp(0.8em, 3vw, 1.2em);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  min-height: 44px; /* Touch-friendly minimum size */
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Mobile-first responsive breakpoints */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    background-size: cover;
+  }
+
+  #root {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8em 1em;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  #root {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    padding: 0.7em 1.1em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+
+  #root {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    padding: 20px;
+  }
+
+  #root {
+    max-width: 1200px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* body {
+    background-size: contain;
+  } */
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+    padding: 5px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    padding: 0.5em 1em;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: none;
+    animation: none;
+    color: #000;
+  }
+
+  button {
+    border: 1px solid #000;
+    background: transparent;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f0f0f0;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ffffff;
+    background-color: #000;
+  }
+
+  button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body {
+    animation: none;
+  }
+
+  a:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  button {
+    min-height: 48px; /* Larger touch targets */
+    min-width: 48px;
+  }
+
+  a {
+    min-height: 44px;
+    display: inline-block;
+  }
+}
+
+/* Container queries support (modern browsers) */
+@supports (container-type: inline-size) {
+  #root {
+    container-type: inline-size;
+  }
+
+  @container (max-width: 400px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

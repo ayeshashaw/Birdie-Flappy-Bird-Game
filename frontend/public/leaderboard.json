@@ -1,0 +1,14 @@
+{
+  "scores": [
+    { "id": 1, "username": "FlappyMaster", "score": 150, "date": "2025-06-08" },
+    { "id": 2, "username": "BirdLover42", "score": 128, "date": "2025-06-08" },
+    { "id": 3, "username": "SkyKing", "score": 115, "date": "2025-06-07" },
+    { "id": 4, "username": "PixelPilot", "score": 98, "date": "2025-06-07" },
+    { "id": 5, "username": "FeatherFlyer", "score": 87, "date": "2025-06-06" },
+    { "id": 6, "username": "CloudSurfer", "score": 76, "date": "2025-06-06" },
+    { "id": 7, "username": "WingWarrior", "score": 65, "date": "2025-06-05" },
+    { "id": 8, "username": "AeroAce", "score": 54, "date": "2025-06-05" },
+    { "id": 9, "username": "NestChampion", "score": 43, "date": "2025-06-04" },
+    { "id": 10, "username": "FlappyNewbie", "score": 32, "date": "2025-06-04" }
+  ]
+}
