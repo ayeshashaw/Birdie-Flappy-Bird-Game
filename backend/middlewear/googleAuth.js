@@ -29,10 +29,10 @@ const googleAuth = async (req, res) => {
     }
 
     const accessToken = generateToken(user.email);
-    res.redirect(`http://localhost:5173/auth-success?token=${encodeURIComponent(accessToken)}`);
+    res.redirect(`https://birdie-flappy-bird-game.vercel.app/auth-success?token=${encodeURIComponent(accessToken)}`);
   } catch (error) {
     console.error("Google Auth Middleware Error:", error);
-    res.redirect(`http://localhost:5173?error=auth_failed`);
+    res.redirect(`https://birdie-flappy-bird-game.vercel.app?error=auth_failed`);
   }
 };
 
