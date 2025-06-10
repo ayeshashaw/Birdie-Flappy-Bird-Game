@@ -22,7 +22,7 @@ const validationSchema = Yup.object({
 });
 
 const loginWithGoogle = ()=>{
-  window.location.href = 'http://localhost:3000/auth/google'
+  window.location.href = 'https://birdie-flappy-bird-game.onrender.com/auth/google'
 }
 
 const Login = () => {
