@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import GameDisplay from "../GameDisplay";
 import Footer from "../Footer";
 import { CiUser } from "react-icons/ci";
+
 const Dashboard = () => {
   const [userProfile, setUserProfile] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,10 +24,9 @@ const Dashboard = () => {
           method: "GET",
         };
         const result = await httpAction(data);
-
         if (result?.success) {
-          setUserProfile(result.user); // Change this line
-        } 
+          setUserProfile(result.user);
+        }
       } catch (error) {
         console.error("Failed to fetch user profile:", error);
         toast.error("An error occurred while fetching user profile");
@@ -39,21 +39,19 @@ const Dashboard = () => {
   }, []);
 
   const handleLogout = async () => {
-  try {
-    const data = {
-      url: apis().logout,  // Ensure your backend has a logout route that clears the cookie
-      method: "POST",
-    };
-    await httpAction(data);
-
-    toast.success("Logged out successfully");
-    navigate("/");
-  } catch (error) {
-    console.error("Logout failed:", error);
-    toast.error("Logout failed");
-  }
-};
-
+    try {
+      const data = {
+        url: apis().logout,
+        method: "POST",
+      };
+      await httpAction(data);
+      toast.success("Logged out successfully");
+      navigate("/");
+    } catch (error) {
+      console.error("Logout failed:", error);
+      toast.error("Logout failed");
+    }
+  };
 
   if (loading) {
     return (
@@ -65,37 +63,33 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      {/* Leaderboard Button at Top Left */}
-      <div className="leaderboard-btn-container">
-        <button
-          className="leaderboardbtn"
-          onClick={() => navigate("/leaderboard")}
-        >
-          🏆 Leaderboard
-        </button>
-      </div>
+      {/* ADD THIS WRAPPER DIV */}
+      <div className="dashboard-header">
+        {/* Leaderboard Button */}
+        <div className="leaderboard-btn-container">
+          <button className="leaderboardbtn" onClick={() => navigate("/leaderboard")}>
+            🏆 Leaderboard
+          </button>
+        </div>
 
-      {/* User Profile Section */}
-      <div className="user-profile-section">
-        <div className="profile-header">
-          {/* <div className="user-email">
-            {/* <CiUser size={20} style={{ marginRight: '8px' }} />  */}
-          {/* {userProfile?.email} */}
-          {/* </div>  */}
-          <div></div>
-          <div className="profile-actions">
-            <Button
-              variant="contained"
-              color="error"
-              startIcon={<Logout />}
-              onClick={handleLogout}
-            >
-              Logout
-            </Button>
+        {/* User Profile Section */}
+        <div className="user-profile-section">
+          <div className="profile-header">
+            <div className="profile-actions">
+              <Button
+                variant="contained"
+                color="error"
+                startIcon={<Logout />}
+                onClick={handleLogout}
+              >
+                Logout
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Main Game Content */}
       <div className="app">
         <h1>Flappy Bird</h1>
         <GameDisplay />
