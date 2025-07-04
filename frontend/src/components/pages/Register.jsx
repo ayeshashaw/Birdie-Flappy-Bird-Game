@@ -136,15 +136,15 @@ const Register = () => {
                   </div>
 
                   <div className="form-field">
-                    <Button
-                      onClick={loginWithGoogle}
+{/*                     <Button */}
+{/*                       onClick={loginWithGoogle}
                       variant="outlined"
                       fullWidth
                       endIcon={<Google />}
                       className="google-button"
                     >
                       Continue with Google
-                    </Button>
+                    </Button> */}
                   </div>
 
                   <div className="form-field">
