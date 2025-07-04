@@ -40,7 +40,7 @@ const Footer = () => {
       {/* GitHub links */}
       <div style={{ display: "flex", justifyContent: "center", gap: "30px" }}>
         <a
-          href="https://github.com/ishitars27"
+          href="https://github.com/vinayakxsingh21"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#aeeaff", transition: "color 0.3s",backgroundColor:"#000", display:"inline" }}
