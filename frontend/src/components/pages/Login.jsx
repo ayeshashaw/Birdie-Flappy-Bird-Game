@@ -130,14 +130,14 @@ const Login = () => {
 
 
                 <div className="form-field">
-                  <button 
+{/*                   <button 
                     type="button"
                     onClick={loginWithGoogle}
                     className="google-button"
                   >
                     <FcGoogle className="google-icon" />
                     Continue with Google
-                  </button>
+                  </button> */}
                 </div>
 
 
